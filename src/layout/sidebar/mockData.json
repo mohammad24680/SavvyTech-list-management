@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "parentId": 0,
+    "to": "/",
+    "name": "داشبورد",
+    "key": "dasboard"
+  },
+  {
+    "id": 2,
+    "parentId": 0,
+    "to": "/users",
+    "name": "کاربران",
+    "key": "users"
+  }
+]
