@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  direction: rtl;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+* {
+  box-sizing: border-box;
+  outline: 0 !important;
+  font-family: "Number", sans-serif;
+}
+*::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 3px #fff;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.12);
+}
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  background-color: rgba(0, 0, 0, 0.12);
+}
+*::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  -webkit-box-shadow: inset 0 0 6px #9fa8da;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+::placeholder {
+  color: rgba(0, 0, 0, 0.87) !important;
+  opacity: 1 !important; /* Firefox */
+  font-size: 12px !important;
+}
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: rgba(0, 0, 0, 0.87) !important;
+  font-size: 12px !important;
+}
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: rgba(0, 0, 0, 0.87) !important;
+  font-size: 12px !important;
+}
+.css-14el2xx-placeholder {
+  color: rgba(0, 0, 0, 0.87) !important;
+  font-size: 12px !important;
+}
+.no-select {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+.direction-rtl {
+  direction: rtl;
+}
+.direction-ltr {
+  direction: ltr;
+}
