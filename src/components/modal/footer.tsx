@@ -1,6 +1,10 @@
 import { Footer } from "./style";
 
-const ModalFooter = ({ children }: { children: any }) => {
+interface ModalFooterProps {
+  children?: React.ReactNode;
+}
+
+const ModalFooter: React.FC<ModalFooterProps> = ({ children }) => {
   return <Footer>{children}</Footer>;
 };
 

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { type ButtonHTMLAttributes } from "react";
 import { ButtonWrapper, Icon } from "./style";
 import ButtonSkeleton from "./skeleton";
 
@@ -6,16 +6,14 @@ import ButtonSkeleton from "./skeleton";
  * A button component with ability to change its color and size.
  * */
 
-interface ButtonInterface {
+interface ButtonInterface extends ButtonHTMLAttributes<HTMLButtonElement> {
   children?: React.ReactNode;
   color?: string;
-  onClick?: (e: any) => void;
   size?: string;
   loading?: boolean;
   disabled?: boolean;
   className?: string;
   type?: "button" | "submit" | "reset" | undefined;
-  rest?: any;
   leftIcon?: string;
   rightIcon?: string;
 }

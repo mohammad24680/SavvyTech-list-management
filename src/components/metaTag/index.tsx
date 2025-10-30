@@ -1,4 +1,3 @@
-// components/MetaTags.tsx
 import { Helmet } from "react-helmet-async";
 
 interface MetaTagsProps {
