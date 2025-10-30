@@ -5,7 +5,7 @@ interface ModalWrapperInterface {
   show?: boolean;
 }
 interface AlertInterface {
-  type: any;
+  type?: string;
 }
 export const ModalWrapper = styled.div<ModalWrapperInterface>`
   display: ${({ show }) => (show ? "block" : "none")};

@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import "./index.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import routes from "./routes";
+import routes, { type RouteItem } from "./routes";
 import MetaTags from "../components/metaTag/index";
 import Loading from "../components/loading";
 import "./ReactToastify.css";
@@ -13,7 +13,7 @@ function App() {
       <Router>
         <ToastContainer
           position="bottom-left"
-          autoClose={parseInt(import.meta.env.VITE_TOASTER_CLOSE_TIMEOUT)}
+          autoClose={500}
           hideProgressBar={false}
           newestOnTop={false}
           closeOnClick
@@ -23,7 +23,7 @@ function App() {
           pauseOnHover
         />
         <Routes>
-          {routes.map((RouteItems: any, key: number) => {
+          {routes.map((RouteItems: RouteItem, key: number) => {
             return (
               <Route
                 key={key}

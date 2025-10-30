@@ -6,19 +6,24 @@ import "ag-grid-community/styles/ag-theme-alpine.css";
 import "./GlobalAgGridStyle.css";
 import TableSkeleton from "./skeletonTable";
 import EmptyState from "./emtpyState";
-import type { GridApi, GridReadyEvent } from "ag-grid-community";
+import type {
+  GridApi,
+  GridReadyEvent,
+  ColDef,
+  GridOptions,
+} from "ag-grid-community";
 
-interface ITable {
-  columnDefs?: any;
-  data?: any;
-  frameworkComponents?: any;
-  onGridReady?: (a: any) => void;
-  customOnGridRead?: (a: any) => void;
-  gridOptions?: any;
-  suppressRowClickSelection?: any;
-  rest?: any;
+interface ITable<T = any> {
+  columnDefs?: ColDef<T>[];
+  data?: T[];
+  frameworkComponents?: Record<string, React.ComponentType<any>>;
+  onGridReady?: (params: GridReadyEvent) => void;
+  customOnGridRead?: (params: GridReadyEvent) => void;
+  gridOptions?: GridOptions;
+  suppressRowClickSelection?: boolean;
   items?: Array<object>;
   setItems?: Dispatch<SetStateAction<Array<object>>>;
+  [key: string]: any; // for other ag-grid props
 }
 
 const Table = (props: ITable) => {

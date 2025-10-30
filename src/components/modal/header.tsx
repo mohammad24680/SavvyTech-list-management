@@ -1,13 +1,15 @@
 import { Circle, Icon, Logo, Title } from "./style";
 
-const ModalHeader = ({
+interface ModalHeaderProps {
+  modalIcon?: boolean;
+  type?: "normal" | "delete";
+  children?: React.ReactNode;
+}
+
+const ModalHeader: React.FC<ModalHeaderProps> = ({
   modalIcon,
   type = "normal",
   children,
-}: {
-  modalIcon?: boolean;
-  type?: string;
-  children?: any;
 }) => {
   return (
     <>

@@ -4,7 +4,17 @@ import DashboardLayout from "../layout/index";
 const Dashboard = React.lazy(() => import("../pages/dashboard/index"));
 const ListUsers = React.lazy(() => import("../pages/users/index"));
 
-const routes: any = [
+export interface RouteItem {
+  path: string;
+  exact?: boolean;
+  name: string;
+  layout: React.ComponentType<{ children: React.ReactNode }>;
+  Component: React.LazyExoticComponent<React.ComponentType<{}>>;
+  breadcrumb?: string;
+  description?: string;
+}
+
+const routes: RouteItem[] = [
   {
     path: "/",
     exact: true,

@@ -2,7 +2,7 @@ import { Body } from "./style";
 
 interface IModal {
   type?: string;
-  children?: any;
+  children?: React.ReactNode;
   variant?: string;
 }
 
