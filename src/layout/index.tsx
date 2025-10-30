@@ -15,7 +15,7 @@ const DashboardLayOut = ({ children }: DashboardLayoutProps) => {
       <div className="w-64 lg:shadow-sideBar  h-full max-h-screen overflow-y-auto bg-transparent flex justify-start items-end flex-col absolute top-0 right-0 z-20">
         <Sidebar />
       </div>
-      <div className="bg-surface h-full flex justify-between w-[calc(100%-256px)] items-center flex-col overflow-y-auto overflow-x-hidden z-30">
+      <div className="bg-surface h-full flex justify-between w-[calc(100%-256px)] items-center flex-col overflow-y-hidden overflow-x-hidden z-30">
         <header
           className="mx-auto w-full flex justify-center items-center bg-blue_050 h-16 px-4 lg:px-8"
           style={{ height: width < 430 ? "7.5rem" : "4.5rem" }}
